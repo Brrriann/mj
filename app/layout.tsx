@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingButtons from '@/components/ui/FloatingButtons'
 import ConsultPanel from '@/components/ui/ConsultPanel'
+import CustomCursor from '@/components/ui/CustomCursor'
 
 const notoSerifKr = Noto_Serif_KR({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" className={`${notoSerifKr.variable} ${notoSansKr.variable}`}>
       <body>
+        <CustomCursor />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessJsonLd()) }}
