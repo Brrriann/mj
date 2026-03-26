@@ -35,9 +35,12 @@ export default function Header() {
           <nav className="hidden lg:flex gap-8">
             {NAV.map((item) => (
               <div key={item.href} className="relative group">
-                <button className="text-white hover:text-accent transition-colors duration-200 py-4 font-medium cursor-pointer">
+                <Link
+                  href={item.href}
+                  className="text-white hover:text-accent transition-colors duration-200 py-4 font-medium cursor-pointer inline-block"
+                >
                   {item.label}
-                </button>
+                </Link>
                 {/* 드롭다운 */}
                 <div className="absolute top-full left-0 w-44 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   {item.children.map((child) => (
@@ -59,6 +62,7 @@ export default function Header() {
             onClick={() => setMenuOpen(true)}
             className="lg:hidden text-white hover:text-accent transition-colors duration-200 cursor-pointer"
             aria-label="메뉴 열기"
+            aria-expanded={menuOpen}
           >
             <Menu size={28} />
           </button>
