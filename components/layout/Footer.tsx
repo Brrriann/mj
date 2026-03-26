@@ -32,7 +32,7 @@ export default function Footer() {
         <div>
           <p className="text-accent font-bold mb-3">연락처</p>
           <p className="text-gray-300 text-sm mb-2">
-            전화: <a href={`tel:${SITE.phoneRaw}`} className="hover:text-accent transition-colors duration-200">{SITE.phone}</a>
+            전화: <a href={`tel:${SITE.phoneRaw}`} className="hover:text-accent transition-colors duration-200 cursor-pointer">{SITE.phone}</a>
           </p>
           <p className="text-gray-300 text-sm">{SITE.address}</p>
         </div>
