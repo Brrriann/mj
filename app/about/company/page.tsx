@@ -34,13 +34,14 @@ const VALUES = [
 ]
 
 const HISTORY = [
-  { year: '2003', event: '서울지방경찰청 수사과 배속, 강력범죄 수사 시작' },
-  { year: '2008', event: '경제범죄·사기 전담 수사팀 근무, 기업 수사 전문성 확보' },
-  { year: '2013', event: '실종·가출인 전담 수사 경험 — 소재 파악 기술 체계화' },
-  { year: '2018', event: '수사 경력 15년 — 강력·경제·실종 전 분야 경험 완성' },
-  { year: '2021', event: '공인탐정 자격 취득, 명진탐정사무소 설립' },
-  { year: '2023', event: '누적 해결 사건 800건 돌파, 의뢰인 만족도 98% 달성' },
-  { year: '2025', event: '누적 해결 사건 1,200건 돌파, 서울·경기 최다 의뢰 탐정사무소' },
+  { year: '경찰①', event: '서울 영등포경찰서 현장경찰 — 지역 치안 유지 및 형사 수사 기초 확립' },
+  { year: '경찰②', event: '서울 용산경찰서 대통령 교통경호경찰 — VIP 경호 전담, 최고 수준 보안 프로토콜 숙달' },
+  { year: '경찰③', event: '서울 경찰청 제5기동단 대통령 경호지원경찰 — 국가 최고 수준 경호 지원 임무 수행' },
+  { year: '경찰④', event: '서울 관악경찰서 수사팀 — 형사 수사 전담, 증거 수집 및 피의자 검거 역량 완성' },
+  { year: '자문①', event: '법무법인 인율 전문·자문위원 취임 — 법률 전문가 협력 네트워크 구축' },
+  { year: '자문②', event: '노무법인 권익 자문위원 취임 — 기업 내부 조사 분야 자문 활동 시작' },
+  { year: '자문③', event: '직진법무사사무소 자문위원 취임 — 민사·가사 증거 수집 자문, 탐정사 1급 자격 취득' },
+  { year: '현재', event: '명진탐정사무소 대표탐정 — 배우자 불륜·소재파악·기업조사·증거수집 전 분야 직접 담당' },
 ]
 
 export default function CompanyPage() {
@@ -71,7 +72,7 @@ export default function CompanyPage() {
                 <p className="text-textprimary font-medium leading-relaxed">
                   &ldquo;의뢰인의 아픔을 내 것으로 여기고, 진실을 밝히는 일에 최선을 다합니다.&rdquo;
                 </p>
-                <p className="text-accent text-sm mt-2 font-medium">— 명진탐정사무소 대표</p>
+                <p className="text-accent text-sm mt-2 font-medium">— 대표탐정 김민재</p>
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right">

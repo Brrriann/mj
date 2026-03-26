@@ -1,10 +1,13 @@
 export const SITE = {
   name: '명진탐정사무소',
+  ceo: '김민재',
   phone: '010-8418-2033',
   phoneRaw: '01084182033',
+  email: 'mjdet@naver.com',
   kakaoUrl: 'https://pf.kakao.com/_PLACEHOLDER', // 실제 채널 URL로 교체 필요
   domain: 'https://mjdet.com',
-  address: '서울특별시 (상세 주소 추가 예정)',
+  address: '서울 관악구 관악로 168, 409호',
+  businessNumber: '878-61-01039',
 }
 
 export const NAV = [

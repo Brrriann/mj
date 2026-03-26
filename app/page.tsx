@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, MessageCircle, ChevronRight, ArrowRight, BadgeCheck, Quote } from 'lucide-react'
+import { Phone, MessageCircle, ChevronRight, ArrowRight, BadgeCheck, Quote, Shield, Briefcase } from 'lucide-react'
 import HeroSection from '@/components/ui/HeroSection'
 import TrustSection from '@/components/ui/TrustSection'
 import ScrollReveal from '@/components/ui/ScrollReveal'
@@ -208,6 +208,101 @@ export default function HomePage() {
               전체 후기 보기 <ChevronRight size={16} />
             </Link>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 대표탐정 소개 — CEO 섹션 */}
+      <section className="py-28 bg-primary text-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal direction="left">
+              <p className="text-accent text-sm tracking-widest uppercase mb-3">Detective</p>
+              <h2 className="text-4xl font-bold font-serif mb-6">전직 경찰 출신<br /><span className="text-accent">대표탐정 {SITE.ceo}</span></h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                서울 경찰청 제5기동단 대통령 경호지원경찰 출신으로 대한민국 최고 수준의 보안·수사 역량을 보유하고 있습니다.
+                현장 경찰, 대통령 경호, 수사팀을 거치며 쌓은 실전 경험이 의뢰인의 문제를 해결하는 데 직접 사용됩니다.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  '서울 영등포경찰서 현장경찰',
+                  '서울 용산경찰서 대통령 교통경호경찰',
+                  '서울 경찰청 제5기동단 대통령 경호지원경찰',
+                  '서울 관악경찰서 수사팀',
+                  '법무법인 인율 · 노무법인 권익 · 직진법무사사무소 자문위원',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-300 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-1.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/about/ceo" className="inline-flex items-center gap-2 border border-accent text-accent px-8 py-3 hover:bg-accent hover:text-white transition-all duration-300 font-medium cursor-pointer">
+                대표 소개 보기 <ArrowRight size={16} />
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="border border-accent/30 p-8 relative">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 -translate-y-1/2 translate-x-1/2" />
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+                  <div className="w-20 h-20 border-2 border-accent flex items-center justify-center bg-accent/10 flex-shrink-0">
+                    <Shield size={36} className="text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-accent text-xs tracking-widest uppercase mb-1">전직 경찰 출신</p>
+                    <p className="text-white text-2xl font-bold font-serif">{SITE.ceo}</p>
+                    <p className="text-gray-400 text-sm">대표탐정 · 탐정사 1급</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: '탐정사 1급', sub: '등록번호 2023-003035' },
+                    { label: '대통령 경호 출신', sub: '서울 경찰청 제5기동단' },
+                    { label: '법무·노무 자문위원', sub: '3개 전문기관 협력' },
+                    { label: '수사팀 출신', sub: '형사 수사 전문 경력' },
+                  ].map((c) => (
+                    <div key={c.label} className="bg-white/5 border border-white/10 p-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Briefcase size={12} className="text-accent" />
+                        <p className="text-white text-sm font-medium">{c.label}</p>
+                      </div>
+                      <p className="text-gray-500 text-xs">{c.sub}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 협력 기관 */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <ScrollReveal className="text-center mb-12">
+            <p className="text-accent text-sm font-medium tracking-widest uppercase mb-2">Partners</p>
+            <h2 className="text-3xl font-bold font-serif text-primary">협력 기관</h2>
+            <div className="w-12 h-1 bg-accent mx-auto mt-4 mb-4" />
+            <p className="text-textsecondary text-sm">법적 효력 있는 결과를 위해 전문 법무·노무 기관과 협력합니다</p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-100">
+            {[
+              { name: '법무법인 인율', en: 'Law Firm INYUL', role: '전문·자문위원', desc: '민사·형사·가사 소송 연계 및 법원 제출용 증거 효력 검토' },
+              { name: '노무법인 권익', en: 'Labor Firm KWONICK', role: '자문위원', desc: '기업 내부 조사·직장 비위·채용 신원조사 분야 협력' },
+              { name: '직진법무사사무소', en: 'JIKJIN Legal Office', role: '자문위원', desc: '이혼·재산분쟁·채권 회수 증거 수집 및 서류 작성 협력' },
+            ].map((p, i) => (
+              <ScrollReveal key={p.name} delay={0.1 * i}>
+                <div className="bg-white p-8 h-full hover:bg-bgalt transition-colors duration-300">
+                  <p className="text-accent text-xs tracking-widest uppercase mb-2">{p.en}</p>
+                  <h3 className="text-xl font-bold font-serif text-primary mb-1">{p.name}</h3>
+                  <p className="text-accent text-xs font-medium mb-4 flex items-center gap-1">
+                    <BadgeCheck size={12} /> {p.role}
+                  </p>
+                  <p className="text-textsecondary text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

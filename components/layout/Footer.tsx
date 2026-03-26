@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react'
+import { Phone, MessageCircle, MapPin, Clock, Mail } from 'lucide-react'
 import { SITE, NAV } from '@/lib/constants'
 
 export default function Footer() {
@@ -26,6 +26,9 @@ export default function Footer() {
             <p className="flex items-start gap-3 text-gray-400 text-sm">
               <MapPin size={15} className="text-accent mt-0.5" /> {SITE.address}
             </p>
+            <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-gray-400 hover:text-accent transition-colors duration-200 text-sm cursor-pointer">
+              <Mail size={15} className="text-accent" /> {SITE.email}
+            </a>
           </div>
         </div>
 
@@ -86,7 +89,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-5">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-gray-500 text-xs">&copy; {new Date().getFullYear()} 명진탐정사무소. All rights reserved.</p>
-          <p className="text-gray-600 text-xs">사업자등록번호: 000-00-00000 | 민간조사 자격번호: 제0000호</p>
+          <p className="text-gray-600 text-xs">상호: 명진탐정사무소 | 대표: {SITE.ceo} | 사업자등록번호: {SITE.businessNumber} | 탐정사 1급 2023-003035</p>
         </div>
       </div>
     </footer>
