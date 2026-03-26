@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Noto_Serif_KR, Noto_Sans_KR } from 'next/font/google'
 import './globals.css'
 import { SITE } from '@/lib/constants'
+import { generateLocalBusinessJsonLd } from '@/lib/seo'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingButtons from '@/components/ui/FloatingButtons'
@@ -34,6 +35,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" className={`${notoSerifKr.variable} ${notoSansKr.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessJsonLd()) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />
