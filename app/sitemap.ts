@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
-import { SITE } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = 'https://mjdet.com'
   const routes = [
     '',
     '/about/company',
@@ -16,11 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact/consult',
     '/contact/location',
   ]
-
   return routes.map((route) => ({
-    url: `${SITE.domain}${route}`,
+    url: `${base}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly',
+    changeFrequency: route === '' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : 0.8,
   }))
 }
