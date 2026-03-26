@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mjdet.com)",
+      "Bash(gh repo:*)",
+      "Bash(python3 /c/Users/offic/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/.claude/skills/ui-ux-pro-max/scripts/search.py \"detective agency professional trust legal service Korean\" --design-system --persist -p \"명진탐정사무소\" -f markdown)",
+      "Bash(python3 \"/c/Users/offic/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max/scripts/search.py\" \"detective agency professional trust legal service Korean\" --design-system --persist -p \"명진탐정사무소\" -f markdown)",
+      "Bash(python3 \"/c/Users/offic/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max/scripts/search.py\" \"animation accessibility z-index loading\" --domain ux)",
+      "Bash(python3 \"/c/Users/offic/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max/scripts/search.py\" \"layout responsive form\" --stack nextjs)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(cd /c)",
+      "Bash(npx create-next-app@latest mj --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@latest mj-temp --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(wmic logicaldisk:*)",
+      "Bash(powershell \"Get-PSDrive C | Select-Object Used,Free\")",
+      "Bash(npm cache:*)",
+      "Read(//c/mj-temp/**)",
+      "Bash(npm install:*)",
+      "Bash(mv /c/mj/design-system /c/mj-design-system-temp)",
+      "Bash(mv /c/mj/docs /c/mj-docs-temp)",
+      "Bash(mv /c/mj-design-system-temp /c/mj/design-system)",
+      "Bash(mv /c/mj-docs-temp /c/mj/docs)",
+      "Bash(npm view:*)",
+      "Bash(npm run:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
