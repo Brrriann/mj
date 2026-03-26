@@ -51,4 +51,4 @@ export const INQUIRY_TYPES = [
   '기업 신용조사',
   '증거 수집',
   '기타',
-]
+] as const

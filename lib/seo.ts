@@ -4,18 +4,24 @@ import { SITE } from './constants'
 export function generateMetadata({
   title,
   description,
+  pathname,
 }: {
   title: string
   description: string
+  pathname?: string
 }): Metadata {
   const fullTitle = `${title} | ${SITE.name}`
+  const pageUrl = pathname ? `${SITE.domain}${pathname}` : SITE.domain
   return {
     title: fullTitle,
     description,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: fullTitle,
       description,
-      url: SITE.domain,
+      url: pageUrl,
       siteName: SITE.name,
       locale: 'ko_KR',
       type: 'website',
