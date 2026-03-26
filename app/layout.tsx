@@ -5,6 +5,7 @@ import { SITE } from '@/lib/constants'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingButtons from '@/components/ui/FloatingButtons'
+import ConsultPanel from '@/components/ui/ConsultPanel'
 
 const notoSerifKr = Noto_Serif_KR({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <FloatingButtons />
+        <ConsultPanel />
       </body>
     </html>
   )
